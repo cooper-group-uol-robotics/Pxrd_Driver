@@ -1,4 +1,5 @@
-# have to change the PID fro x'pery operator interface if the program has been restarted 
+#!/usr/bin/python3
+
 from pywinauto import Application
 import os
 import time

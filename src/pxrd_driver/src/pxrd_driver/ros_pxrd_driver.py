@@ -1,4 +1,4 @@
-
+#!/usr/bin/python3
 
 #ROS driver for the PXRD Station
 #Utilises ROS Topics to facilitate communication with robot
