@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+
+import rospy 
+from pxrd_driver.src.pxrd_driver.ros_pxrd_driver import PxrdRos
+            
+if __name__ == "__main__":
+    rospy.init_node("pxrd_driver", anonymous=True) #initialize rospy node
+    Pxrd_ROS = PxrdRos() #Create instance of ROS Wrapper
+    rospy.loginfo("pxrd driver started")
+    rospy.spin()

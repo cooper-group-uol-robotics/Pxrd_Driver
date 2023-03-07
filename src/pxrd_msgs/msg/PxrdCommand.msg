@@ -1,0 +1,6 @@
+int32 LAUNCH_PROGRAM = 0
+int32 TAKE_TIME_STAMP = 1
+int32 EXECUTE = 2
+int32 TERMINATE = 4
+
+int32 pxrd_command

@@ -1,0 +1,3 @@
+<launch>
+	<node name="pxrd_node" pkg="pxrd_driver" type="pxrd_node" output="screen"/> 	
+</launch>
