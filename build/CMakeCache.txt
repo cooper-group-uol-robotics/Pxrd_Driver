@@ -461,6 +461,9 @@ pxrd_driver_SOURCE_DIR:STATIC=/home/satheesh/PXRD_ws/src/pxrd_driver
 //Value Computed by CMake
 pxrd_msgs_BINARY_DIR:STATIC=/home/satheesh/PXRD_ws/build/pxrd_msgs
 
+//The directory containing a CMake configuration file for pxrd_msgs.
+pxrd_msgs_DIR:PATH=/home/satheesh/PXRD_ws/devel/share/pxrd_msgs/cmake
+
 //Value Computed by CMake
 pxrd_msgs_SOURCE_DIR:STATIC=/home/satheesh/PXRD_ws/src/pxrd_msgs
 

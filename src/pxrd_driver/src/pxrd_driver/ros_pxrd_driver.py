@@ -30,14 +30,18 @@ class PxrdRos:
 
     def command_callback(self, msg):
         if (msg.pxrd_command == PxrdCommand.LAUNCH_PROGRAM):
-            self._pxrd_driver.launch_program
+            rospy.loginfo("launch program")
+            #self._pxrd_driver.launch_program
             self._state = PxrdStatus.PROGRAM_LAUNCHED
         elif (msg.pxrd_command == PxrdCommand.TAKE_TIME_STAMP):
-            self._pxrd_driver.take_execution_time_stamp
+            rospy.loginfo("take timestamp")
+            # self._pxrd_driver.take_execution_time_stamp
             self._state = PxrdStatus.TIME_STAMP_RECORDED
-        elif (msg.pxrd_command == PxrdCommand.TAKE_TIME_STAMP):
-            self.execution = self._pxrd_driver.execute
+        elif (msg.pxrd_command == PxrdCommand.EXECUTE):
+            rospy.loginfo("execute")
+            #self.execution = self._pxrd_driver.execute
             if self.execution == True:
                 self._state = PxrdStatus.EXECUTION_DONE
         elif (msg.pxrd_command == PxrdCommand.TERMINATE):
+            rospy.loginfo("terminate")
             self._terminate_driver = True

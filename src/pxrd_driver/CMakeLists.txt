@@ -11,7 +11,26 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  pxrd_msgs
 )
+
+catkin_python_setup()
+
+
+catkin_package(
+	CATKIN_DEPENDS pxrd_msgs)
+
+include_directories(
+# include
+  ${catkin_INCLUDE_DIRS}
+)
+
+
+catkin_install_python(PROGRAMS nodes/pxrd_node
+   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+ )
+
+
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
