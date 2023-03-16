@@ -54,14 +54,6 @@ class PXRDStationROSHandler(StationHandler):
             if (isinstance(self._current_pxrd_status,PxrdStatus.NOT_LAUNCHED_YET)):
                 rospy.loginfo('starting pxrd job')
                 for i in range(10):
-                    self.pub_pxrd.publish(PXRD_commands=PxrdCommand.LAUNCH_PROGRAM)
-                self._desired_pxrd_status =  PxrdStatus.PROGRAM_LAUNCHED
-            elif (isinstance(self._current_pxrd_status,PxrdStatus.PROGRAM_LAUNCHED)):
-                for i in range(10):
-                    self.pub_pxrd.publish(PXRD_commands=PxrdCommand.TAKE_TIME_STAMP)
-                self._desired_pxrd_status =  PxrdStatus.TIME_STAMP_RECORDED
-            elif (isinstance(self._current_pxrd_status,PxrdStatus.TIME_STAMP_RECORDED)):
-                for i in range(10):
                     self.pub_pxrd.publish(PXRD_commands=PxrdCommand.EXECUTE)
                 self._desired_pxrd_status =  PxrdStatus.EXECUTION_DONE
             elif (isinstance(self._current_pxrd_status,PxrdStatus.EXECUTION_DONE)):

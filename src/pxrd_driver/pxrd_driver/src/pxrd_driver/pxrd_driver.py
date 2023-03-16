@@ -12,19 +12,30 @@ class PxrdDriver:
         self.path = r'C:\AutoXRD_Data'
         self.execution_done = False
     
-    def launch_program(self):
+    # def launch_program(self):
+    #     self.app.XPertOperatorInterfaceCXOIGeneralDatajobs15secxml.control 
+    #     self.app.XPertOperatorInterfaceCXOIGeneralDatajobs15secxml.MenuSelect("File -> Open")
+    #     self.app.Openjob.Edit.set_edit_text('15sec.xml')
+    #     self.app.Openjob.Open.click_input()
+    #     time.sleep(3)
+    
+    # def take_execution_time_stamp(self):
+    #     self.current_dateTime = datetime.now()
+    #     print(self.current_dateTime)
+    #     self.app.XPertOperatorInterfaceCXOIGeneralDatajobs15secxml.MenuSelect("Job -> Execute -> Current")
+
+    def execute(self):
+        #launch
         self.app.XPertOperatorInterfaceCXOIGeneralDatajobs15secxml.control 
         self.app.XPertOperatorInterfaceCXOIGeneralDatajobs15secxml.MenuSelect("File -> Open")
         self.app.Openjob.Edit.set_edit_text('15sec.xml')
         self.app.Openjob.Open.click_input()
         time.sleep(3)
-    
-    def take_execution_time_stamp(self):
+        #time_stamp
         self.current_dateTime = datetime.now()
         print(self.current_dateTime)
         self.app.XPertOperatorInterfaceCXOIGeneralDatajobs15secxml.MenuSelect("Job -> Execute -> Current")
-
-    def execute(self):
+        #execute
         while len(self.current_batch_files) < 8:
             for file in os.listdir(self.path):
                 self.file_name = self.path+'\\'+file
