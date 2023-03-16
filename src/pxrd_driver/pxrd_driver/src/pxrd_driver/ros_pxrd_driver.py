@@ -30,7 +30,7 @@ class PxrdRos:
     def command_callback(self, msg):
         if (msg.pxrd_command == PxrdCommand.EXECUTE):
             rospy.loginfo("execute")
-            self.execution = self._pxrd_driver.execute
+            self.execution = self._pxrd_driver.execute()
             if self.execution == True:
                 self._state = PxrdStatus.EXECUTION_DONE
         elif (msg.pxrd_command == PxrdCommand.TERMINATE):
