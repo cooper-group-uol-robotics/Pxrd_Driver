@@ -1,2 +1,2 @@
-pxrd_driver:pxrd_msgs
+pxrd_driverr/pxrd_driver:pxrd_driverr/pxrd_msgs
 -DCATKIN_DEVEL_PREFIX=/home/satheesh/PXRD_ws/devel -DCMAKE_INSTALL_PREFIX=/home/satheesh/PXRD_ws/install -G Unix Makefiles

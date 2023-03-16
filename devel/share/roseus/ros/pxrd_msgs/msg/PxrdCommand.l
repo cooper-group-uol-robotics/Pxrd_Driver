@@ -23,14 +23,14 @@
 (defconstant pxrd_msgs::PxrdCommand::*EXECUTE* 2)
 (intern "*TERMINATE*" (find-package "PXRD_MSGS::PXRDCOMMAND"))
 (shadow '*TERMINATE* (find-package "PXRD_MSGS::PXRDCOMMAND"))
-(defconstant pxrd_msgs::PxrdCommand::*TERMINATE* 4)
+(defconstant pxrd_msgs::PxrdCommand::*TERMINATE* 3)
 
 (defun pxrd_msgs::PxrdCommand-to-symbol (const)
   (cond
         ((= const 0) 'pxrd_msgs::PxrdCommand::*LAUNCH_PROGRAM*)
         ((= const 1) 'pxrd_msgs::PxrdCommand::*TAKE_TIME_STAMP*)
         ((= const 2) 'pxrd_msgs::PxrdCommand::*EXECUTE*)
-        ((= const 4) 'pxrd_msgs::PxrdCommand::*TERMINATE*)
+        ((= const 3) 'pxrd_msgs::PxrdCommand::*TERMINATE*)
         (t nil)))
 
 (defclass pxrd_msgs::PxrdCommand
@@ -70,19 +70,19 @@
    self)
   )
 
-(setf (get pxrd_msgs::PxrdCommand :md5sum-) "4215983bfc493fcb5359a6580eba4c41")
+(setf (get pxrd_msgs::PxrdCommand :md5sum-) "f889a2e61012c7bf0f0f5017c5ade6c6")
 (setf (get pxrd_msgs::PxrdCommand :datatype-) "pxrd_msgs/PxrdCommand")
 (setf (get pxrd_msgs::PxrdCommand :definition-)
       "int32 LAUNCH_PROGRAM = 0
 int32 TAKE_TIME_STAMP = 1
 int32 EXECUTE = 2
-int32 TERMINATE = 4
+int32 TERMINATE = 3
 
 int32 pxrd_command
 ")
 
 
 
-(provide :pxrd_msgs/PxrdCommand "4215983bfc493fcb5359a6580eba4c41")
+(provide :pxrd_msgs/PxrdCommand "f889a2e61012c7bf0f0f5017c5ade6c6")
 
 

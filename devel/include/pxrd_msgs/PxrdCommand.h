@@ -56,7 +56,7 @@ struct PxrdCommand_
     LAUNCH_PROGRAM = 0,
     TAKE_TIME_STAMP = 1,
     EXECUTE = 2,
-    TERMINATE = 4,
+    TERMINATE = 3,
   };
 
 
@@ -150,12 +150,12 @@ struct MD5Sum< ::pxrd_msgs::PxrdCommand_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "4215983bfc493fcb5359a6580eba4c41";
+    return "f889a2e61012c7bf0f0f5017c5ade6c6";
   }
 
   static const char* value(const ::pxrd_msgs::PxrdCommand_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x4215983bfc493fcbULL;
-  static const uint64_t static_value2 = 0x5359a6580eba4c41ULL;
+  static const uint64_t static_value1 = 0xf889a2e61012c7bfULL;
+  static const uint64_t static_value2 = 0x0f0f5017c5ade6c6ULL;
 };
 
 template<class ContainerAllocator>
@@ -177,7 +177,7 @@ struct Definition< ::pxrd_msgs::PxrdCommand_<ContainerAllocator> >
     return "int32 LAUNCH_PROGRAM = 0\n"
 "int32 TAKE_TIME_STAMP = 1\n"
 "int32 EXECUTE = 2\n"
-"int32 TERMINATE = 4\n"
+"int32 TERMINATE = 3\n"
 "\n"
 "int32 pxrd_command\n"
 ;

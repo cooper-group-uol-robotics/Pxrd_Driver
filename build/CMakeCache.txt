@@ -474,19 +474,19 @@ message_generation_DIR:PATH=/opt/ros/noetic/share/message_generation/cmake
 message_runtime_DIR:PATH=/opt/ros/noetic/share/message_runtime/cmake
 
 //Value Computed by CMake
-pxrd_driver_BINARY_DIR:STATIC=/home/satheesh/PXRD_ws/build/pxrd_driver
+pxrd_driver_BINARY_DIR:STATIC=/home/satheesh/PXRD_ws/build/pxrd_driverr/pxrd_driver
 
 //Value Computed by CMake
-pxrd_driver_SOURCE_DIR:STATIC=/home/satheesh/PXRD_ws/src/pxrd_driver
+pxrd_driver_SOURCE_DIR:STATIC=/home/satheesh/PXRD_ws/src/pxrd_driverr/pxrd_driver
 
 //Value Computed by CMake
-pxrd_msgs_BINARY_DIR:STATIC=/home/satheesh/PXRD_ws/build/pxrd_msgs
+pxrd_msgs_BINARY_DIR:STATIC=/home/satheesh/PXRD_ws/build/pxrd_driverr/pxrd_msgs
 
 //The directory containing a CMake configuration file for pxrd_msgs.
 pxrd_msgs_DIR:PATH=/home/satheesh/PXRD_ws/devel/share/pxrd_msgs/cmake
 
 //Value Computed by CMake
-pxrd_msgs_SOURCE_DIR:STATIC=/home/satheesh/PXRD_ws/src/pxrd_msgs
+pxrd_msgs_SOURCE_DIR:STATIC=/home/satheesh/PXRD_ws/src/pxrd_driverr/pxrd_msgs
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/noetic/share/rosconsole/cmake

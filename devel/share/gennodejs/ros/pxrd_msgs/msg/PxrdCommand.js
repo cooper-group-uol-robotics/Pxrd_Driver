@@ -57,7 +57,7 @@ class PxrdCommand {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '4215983bfc493fcb5359a6580eba4c41';
+    return 'f889a2e61012c7bf0f0f5017c5ade6c6';
   }
 
   static messageDefinition() {
@@ -66,7 +66,7 @@ class PxrdCommand {
     int32 LAUNCH_PROGRAM = 0
     int32 TAKE_TIME_STAMP = 1
     int32 EXECUTE = 2
-    int32 TERMINATE = 4
+    int32 TERMINATE = 3
     
     int32 pxrd_command
     `;
@@ -94,7 +94,7 @@ PxrdCommand.Constants = {
   LAUNCH_PROGRAM: 0,
   TAKE_TIME_STAMP: 1,
   EXECUTE: 2,
-  TERMINATE: 4,
+  TERMINATE: 3,
 }
 
 module.exports = PxrdCommand;
