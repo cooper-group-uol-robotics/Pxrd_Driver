@@ -10,11 +10,13 @@ from pxrd_driver.pxrd_driver import PxrdDriver
 
 
 class PxrdRos:
-    def __init__(self):
+    def __init__(self, duration: str = None):
         #init driver
+        self._duration = duration
         self._pxrd_driver = PxrdDriver()
         self._state = PxrdStatus.NOT_LAUNCHED_YET
         self._terminate_driver = False
+        self.file_name = f'{self._duration}.xml'
         # init subscriber
         rospy.Subscriber("PXRD_commands", PxrdCommand, self.command_callback)
         #init publisher
@@ -30,7 +32,7 @@ class PxrdRos:
     def command_callback(self, msg):
         if (msg.pxrd_command == PxrdCommand.EXECUTE):
             rospy.loginfo("execute")
-            self.execution = self._pxrd_driver.execute()
+            self.execution = self._pxrd_driver.execute(self.file_name)
             if self.execution == True:
                 self._state = PxrdStatus.EXECUTION_DONE
         elif (msg.pxrd_command == PxrdCommand.TERMINATE):

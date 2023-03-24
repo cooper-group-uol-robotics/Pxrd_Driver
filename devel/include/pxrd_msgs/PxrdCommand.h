@@ -39,12 +39,6 @@ struct PxrdCommand_
 
 
 // reducing the odds to have name collisions with Windows.h 
-#if defined(_WIN32) && defined(LAUNCH_PROGRAM)
-  #undef LAUNCH_PROGRAM
-#endif
-#if defined(_WIN32) && defined(TAKE_TIME_STAMP)
-  #undef TAKE_TIME_STAMP
-#endif
 #if defined(_WIN32) && defined(EXECUTE)
   #undef EXECUTE
 #endif
@@ -53,10 +47,8 @@ struct PxrdCommand_
 #endif
 
   enum {
-    LAUNCH_PROGRAM = 0,
-    TAKE_TIME_STAMP = 1,
-    EXECUTE = 2,
-    TERMINATE = 3,
+    EXECUTE = 1,
+    TERMINATE = 2,
   };
 
 
@@ -71,10 +63,6 @@ typedef boost::shared_ptr< ::pxrd_msgs::PxrdCommand > PxrdCommandPtr;
 typedef boost::shared_ptr< ::pxrd_msgs::PxrdCommand const> PxrdCommandConstPtr;
 
 // constants requiring out of line definition
-
-   
-
-   
 
    
 
@@ -150,12 +138,12 @@ struct MD5Sum< ::pxrd_msgs::PxrdCommand_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "f889a2e61012c7bf0f0f5017c5ade6c6";
+    return "df37655a3b1b4dee201d72126c552a65";
   }
 
   static const char* value(const ::pxrd_msgs::PxrdCommand_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xf889a2e61012c7bfULL;
-  static const uint64_t static_value2 = 0x0f0f5017c5ade6c6ULL;
+  static const uint64_t static_value1 = 0xdf37655a3b1b4deeULL;
+  static const uint64_t static_value2 = 0x201d72126c552a65ULL;
 };
 
 template<class ContainerAllocator>
@@ -174,10 +162,8 @@ struct Definition< ::pxrd_msgs::PxrdCommand_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "int32 LAUNCH_PROGRAM = 0\n"
-"int32 TAKE_TIME_STAMP = 1\n"
-"int32 EXECUTE = 2\n"
-"int32 TERMINATE = 3\n"
+    return "int32 EXECUTE = 1\n"
+"int32 TERMINATE = 2\n"
 "\n"
 "int32 pxrd_command\n"
 ;

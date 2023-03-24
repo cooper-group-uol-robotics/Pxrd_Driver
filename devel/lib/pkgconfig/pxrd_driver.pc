@@ -1,4 +1,4 @@
-prefix=/home/satheesh/PXRD_ws/devel
+prefix=/home/satheesh/Pxrd_Driver/devel
 
 Name: pxrd_driver
 Description: Description of pxrd_driver

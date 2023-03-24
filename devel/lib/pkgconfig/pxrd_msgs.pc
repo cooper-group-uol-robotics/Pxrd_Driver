@@ -1,8 +1,8 @@
-prefix=/home/satheesh/PXRD_ws/devel
+prefix=/home/satheesh/Pxrd_Driver/devel
 
 Name: pxrd_msgs
 Description: Description of pxrd_msgs
 Version: 0.0.0
-Cflags: -I/home/satheesh/PXRD_ws/devel/include
+Cflags: -I/home/satheesh/Pxrd_Driver/devel/include
 Libs: -L${prefix}/lib 
 Requires: roscpp rospy std_msgs message_runtime

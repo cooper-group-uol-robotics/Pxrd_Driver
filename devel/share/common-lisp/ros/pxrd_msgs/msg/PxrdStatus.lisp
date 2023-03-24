@@ -28,17 +28,13 @@
   (pxrd_status m))
 (cl:defmethod roslisp-msg-protocol:symbol-codes ((msg-type (cl:eql '<PxrdStatus>)))
     "Constants for message type '<PxrdStatus>"
-  '((:PROGRAM_LAUNCHED . 0)
-    (:TIME_STAMP_RECORDED . 1)
-    (:EXECUTION_DONE . 2)
-    (:NOT_LAUNCHED_YET . 3))
+  '((:NOT_LAUNCHED_YET . 1)
+    (:EXECUTION_DONE . 2))
 )
 (cl:defmethod roslisp-msg-protocol:symbol-codes ((msg-type (cl:eql 'PxrdStatus)))
     "Constants for message type 'PxrdStatus"
-  '((:PROGRAM_LAUNCHED . 0)
-    (:TIME_STAMP_RECORDED . 1)
-    (:EXECUTION_DONE . 2)
-    (:NOT_LAUNCHED_YET . 3))
+  '((:NOT_LAUNCHED_YET . 1)
+    (:EXECUTION_DONE . 2))
 )
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <PxrdStatus>) ostream)
   "Serializes a message object of type '<PxrdStatus>"
@@ -67,16 +63,16 @@
   "pxrd_msgs/PxrdStatus")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<PxrdStatus>)))
   "Returns md5sum for a message object of type '<PxrdStatus>"
-  "7dce7a21d4acb8aa211f6f85a3c7f5b7")
+  "b92491773d58c099e9d91e9c34f664b0")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'PxrdStatus)))
   "Returns md5sum for a message object of type 'PxrdStatus"
-  "7dce7a21d4acb8aa211f6f85a3c7f5b7")
+  "b92491773d58c099e9d91e9c34f664b0")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<PxrdStatus>)))
   "Returns full string definition for message of type '<PxrdStatus>"
-  (cl:format cl:nil "int32 PROGRAM_LAUNCHED = 0~%int32 TIME_STAMP_RECORDED = 1~%int32 EXECUTION_DONE = 2~%int32 NOT_LAUNCHED_YET = 3~%~%int32 pxrd_status~%~%~%"))
+  (cl:format cl:nil "int32 NOT_LAUNCHED_YET = 1~%int32 EXECUTION_DONE = 2~%~%int32 pxrd_status~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'PxrdStatus)))
   "Returns full string definition for message of type 'PxrdStatus"
-  (cl:format cl:nil "int32 PROGRAM_LAUNCHED = 0~%int32 TIME_STAMP_RECORDED = 1~%int32 EXECUTION_DONE = 2~%int32 NOT_LAUNCHED_YET = 3~%~%int32 pxrd_status~%~%~%"))
+  (cl:format cl:nil "int32 NOT_LAUNCHED_YET = 1~%int32 EXECUTION_DONE = 2~%~%int32 pxrd_status~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <PxrdStatus>))
   (cl:+ 0
      4

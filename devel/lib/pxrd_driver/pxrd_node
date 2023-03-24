@@ -3,7 +3,7 @@
 # generated from catkin/cmake/template/script.py.in
 # creates a relay to a python script source file, acting as that file.
 # The purpose is that of a symlink
-python_script = '/home/satheesh/PXRD_ws/src/pxrd_driverr/pxrd_driver/nodes/pxrd_node'
+python_script = '/home/satheesh/Pxrd_Driver/src/pxrd_driver/pxrd_driver/nodes/pxrd_node'
 with open(python_script, 'r') as fh:
     context = {
         '__builtins__': __builtins__,

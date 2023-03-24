@@ -28,17 +28,13 @@
   (pxrd_command m))
 (cl:defmethod roslisp-msg-protocol:symbol-codes ((msg-type (cl:eql '<PxrdCommand>)))
     "Constants for message type '<PxrdCommand>"
-  '((:LAUNCH_PROGRAM . 0)
-    (:TAKE_TIME_STAMP . 1)
-    (:EXECUTE . 2)
-    (:TERMINATE . 3))
+  '((:EXECUTE . 1)
+    (:TERMINATE . 2))
 )
 (cl:defmethod roslisp-msg-protocol:symbol-codes ((msg-type (cl:eql 'PxrdCommand)))
     "Constants for message type 'PxrdCommand"
-  '((:LAUNCH_PROGRAM . 0)
-    (:TAKE_TIME_STAMP . 1)
-    (:EXECUTE . 2)
-    (:TERMINATE . 3))
+  '((:EXECUTE . 1)
+    (:TERMINATE . 2))
 )
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <PxrdCommand>) ostream)
   "Serializes a message object of type '<PxrdCommand>"
@@ -67,16 +63,16 @@
   "pxrd_msgs/PxrdCommand")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<PxrdCommand>)))
   "Returns md5sum for a message object of type '<PxrdCommand>"
-  "f889a2e61012c7bf0f0f5017c5ade6c6")
+  "df37655a3b1b4dee201d72126c552a65")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'PxrdCommand)))
   "Returns md5sum for a message object of type 'PxrdCommand"
-  "f889a2e61012c7bf0f0f5017c5ade6c6")
+  "df37655a3b1b4dee201d72126c552a65")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<PxrdCommand>)))
   "Returns full string definition for message of type '<PxrdCommand>"
-  (cl:format cl:nil "int32 LAUNCH_PROGRAM = 0~%int32 TAKE_TIME_STAMP = 1~%int32 EXECUTE = 2~%int32 TERMINATE = 3~%~%int32 pxrd_command~%~%"))
+  (cl:format cl:nil "int32 EXECUTE = 1~%int32 TERMINATE = 2~%~%int32 pxrd_command~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'PxrdCommand)))
   "Returns full string definition for message of type 'PxrdCommand"
-  (cl:format cl:nil "int32 LAUNCH_PROGRAM = 0~%int32 TAKE_TIME_STAMP = 1~%int32 EXECUTE = 2~%int32 TERMINATE = 3~%~%int32 pxrd_command~%~%"))
+  (cl:format cl:nil "int32 EXECUTE = 1~%int32 TERMINATE = 2~%~%int32 pxrd_command~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <PxrdCommand>))
   (cl:+ 0
      4

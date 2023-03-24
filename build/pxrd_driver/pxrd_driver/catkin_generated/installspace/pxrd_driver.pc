@@ -1,0 +1,8 @@
+prefix=/home/satheesh/Pxrd_Driver/install
+
+Name: pxrd_driver
+Description: Description of pxrd_driver
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

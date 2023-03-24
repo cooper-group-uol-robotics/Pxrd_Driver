@@ -8,20 +8,16 @@ import struct
 
 
 class PxrdCommand(genpy.Message):
-  _md5sum = "f889a2e61012c7bf0f0f5017c5ade6c6"
+  _md5sum = "df37655a3b1b4dee201d72126c552a65"
   _type = "pxrd_msgs/PxrdCommand"
   _has_header = False  # flag to mark the presence of a Header object
-  _full_text = """int32 LAUNCH_PROGRAM = 0
-int32 TAKE_TIME_STAMP = 1
-int32 EXECUTE = 2
-int32 TERMINATE = 3
+  _full_text = """int32 EXECUTE = 1
+int32 TERMINATE = 2
 
 int32 pxrd_command"""
   # Pseudo-constants
-  LAUNCH_PROGRAM = 0
-  TAKE_TIME_STAMP = 1
-  EXECUTE = 2
-  TERMINATE = 3
+  EXECUTE = 1
+  TERMINATE = 2
 
   __slots__ = ['pxrd_command']
   _slot_types = ['int32']

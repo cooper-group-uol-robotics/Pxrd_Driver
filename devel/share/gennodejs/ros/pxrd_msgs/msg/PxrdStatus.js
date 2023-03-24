@@ -57,16 +57,14 @@ class PxrdStatus {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '7dce7a21d4acb8aa211f6f85a3c7f5b7';
+    return 'b92491773d58c099e9d91e9c34f664b0';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    int32 PROGRAM_LAUNCHED = 0
-    int32 TIME_STAMP_RECORDED = 1
+    int32 NOT_LAUNCHED_YET = 1
     int32 EXECUTION_DONE = 2
-    int32 NOT_LAUNCHED_YET = 3
     
     int32 pxrd_status
     
@@ -92,10 +90,8 @@ class PxrdStatus {
 
 // Constants for message
 PxrdStatus.Constants = {
-  PROGRAM_LAUNCHED: 0,
-  TIME_STAMP_RECORDED: 1,
+  NOT_LAUNCHED_YET: 1,
   EXECUTION_DONE: 2,
-  NOT_LAUNCHED_YET: 3,
 }
 
 module.exports = PxrdStatus;

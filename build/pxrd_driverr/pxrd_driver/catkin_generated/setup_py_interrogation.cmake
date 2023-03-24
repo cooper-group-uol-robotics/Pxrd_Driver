@@ -1,7 +1,0 @@
-set(pxrd_driver_SETUP_PY_SETUP_MODULE "distutils.core")
-set(pxrd_driver_SETUP_PY_VERSION "0.0.0")
-set(pxrd_driver_SETUP_PY_SCRIPTS "")
-set(pxrd_driver_SETUP_PY_PACKAGES "pxrd_driver")
-set(pxrd_driver_SETUP_PY_PACKAGE_DIRS "src/pxrd_driver")
-set(pxrd_driver_SETUP_PY_MODULES "")
-set(pxrd_driver_SETUP_PY_MODULE_DIRS "")
